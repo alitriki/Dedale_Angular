@@ -1,14 +1,54 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>DedaleAngular</title>
-  <base href="/">
+<html lang="fr">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <base href="/">
+  <title>Dédale</title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 </head>
-<body>
-  <app-root>Loading...</app-root>
+
+<body class="app-page" ng-app="dedaleApp">
+  <!-- main  -->
+  <div class="container">
+    <div class="row">
+      <app-root>Loading...</app-root>
+    </div>
+  </div>
+  <!-- main end -->
+
+  <script type="text/javascript" src="assets/js/ali.js"></script>
+  <!--   Core JS Files   -->
+  <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/material.min.js"></script>
+  <!-- Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+  <script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
+
+  <!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+  <script type="text/javascript" src="assets/js/material-kit.js"></script>
+  <script type="text/javascript" src="assets/js/ion.rangeSlider.js"></script>
+  <script type="text/javascript" src="assets/js/radarChart.js"></script>
+  <script>
+    $(function() {
+
+      $("#range").ionRangeSlider({
+        hide_min_max: true,
+        keyboard: true,
+        min: 0,
+        max: 5000,
+        from: 1000,
+        to: 1500,
+        type: 'double',
+        step: 1,
+        prefix: "$",
+        grid: true
+      });
+
+    });
+  </script>
 </body>
+
 </html>
